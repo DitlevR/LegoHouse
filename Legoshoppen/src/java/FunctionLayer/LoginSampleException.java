@@ -1,4 +1,4 @@
-package controller;
+package FunctionLayer;
 
 /**
  * The purpose of LoginSampleException is to...

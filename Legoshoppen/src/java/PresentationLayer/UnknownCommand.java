@@ -1,6 +1,7 @@
-package logic;
+package PresentationLayer;
 
-import controller.LoginSampleException;
+import presentation.*;
+import FunctionLayer.LoginSampleException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 

@@ -10,8 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import controller.LoginSampleException;
-import logic.User;
+import FunctionLayer.LoginSampleException;
+import PresentationLayer.User;
 
 /**
  *
@@ -20,7 +20,7 @@ import logic.User;
 public class UserMapper {
     private static Connection connection = DBConnector.getConnection();
     
-    public static void Register(logic.User user) throws LoginSampleException{
+    public static void Register(PresentationLayer.User user) throws LoginSampleException{
         
     try {
             

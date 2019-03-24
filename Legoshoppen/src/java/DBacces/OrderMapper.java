@@ -5,9 +5,9 @@
  */
 package DBacces;
 
-import static controller.LogicFacade.getAllOrderForUser;
-import static controller.LogicFacade.login;
-import controller.LoginSampleException;
+import static FunctionLayer.LogicFacade.getAllOrderForUser;
+import static FunctionLayer.LogicFacade.login;
+import FunctionLayer.LoginSampleException;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.JDBCType;
@@ -17,8 +17,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import logic.LegoHouse;
-import logic.User;
+import PresentationLayer.LegoHouse;
+import PresentationLayer.User;
 
 /**
  *

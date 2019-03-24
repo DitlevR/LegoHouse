@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logic;
+package PresentationLayer;
 
 
+import presentation.*;
 import DBacces.OrderException;
-import controller.LoginSampleException;
+import FunctionLayer.LoginSampleException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller;
+package FunctionLayer;
 
 import DBacces.OrderException;
 import DBacces.OrderMapper;
 import DBacces.UserMapper;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import logic.LegoHouse;
-import logic.User;
+import PresentationLayer.LegoHouse;
+import PresentationLayer.User;
 
 /**
  *
@@ -44,11 +44,15 @@ public class LogicFacade {
     public static ArrayList<LegoHouse> getAllOrders() throws OrderException{
         return OrderMapper.getAllOrders();
     }
-    public static void main(String[] args) throws OrderException, LoginSampleException{
+    
+    
+        
+    
+    public static void main(String[] args) throws OrderException, LoginSampleException, HouseException{
         User user = login("someone@nowhere.com", "sesam");
-        LegoHouse house = new LegoHouse(0 ,user.getId(), 1000, 1000, 8, false);
-        saveOrder(house);
-        System.out.println(getAllOrderForUser(user).toString());
+        LegoHouse house = new LegoHouse(0 ,user.getId(), 12, 53, 10, false);
+        
+        
         
         
        
