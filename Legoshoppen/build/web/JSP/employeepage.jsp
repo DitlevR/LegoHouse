@@ -6,7 +6,7 @@
 
 <%@page import="FunctionLayer.Styklist"%>
 <%@page import="java.util.List"%>
-<%@page import="PresentationLayer.LegoHouse"%>
+<%@page import="FunctionLayer.LegoHouse"%>
 <%@page import="FunctionLayer.LogicFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -27,8 +27,6 @@
          List<Styklist> stykliste = (List<Styklist>) request.getSession().getAttribute("stykliste");
         for(int i = 0; i < list.size(); i++) {
            
-            
-            
             out.print("<p>" + "Order id: " + list.get(i).getOrder_id() +" user id: " + list.get(i).getUser_id() +" length: " + list.get(i).getLength() + " width: " +  list.get(i).getWidth()
                  + " height: " +  list.get(i).getHeight() +" shipped: " + list.get(i).isShipped() + "</p>");
             out.print(stykliste.get(i) + "<br>"); } %>

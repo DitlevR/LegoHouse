@@ -49,8 +49,8 @@ public class saveOrder extends Command{
         }
         LegoHouse house = new LegoHouse(user_id, lengthI, widthI, heightI, false);
         LogicFacade.saveOrder(house);
-        ArrayList<LegoHouse> orders = LogicFacade.getAllOrderForUser(user);
-        request.getSession().setAttribute("orders", orders);
+//        ArrayList<LegoHouse> orders = LogicFacade.getAllOrderForUser(user);
+//        request.getSession().setAttribute("orders", orders);
         return "customerpage";
         
          
