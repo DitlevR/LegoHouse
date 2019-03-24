@@ -10,7 +10,7 @@ import DBacces.OrderMapper;
 import DBacces.UserMapper;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import PresentationLayer.LegoHouse;
+import FunctionLayer.LegoHouse;
 import PresentationLayer.User;
 
 /**

@@ -8,6 +8,7 @@ package PresentationLayer;
 import DBacces.OrderException;
 import FunctionLayer.BrickCalculator;
 import FunctionLayer.HouseException;
+import FunctionLayer.LegoHouse;
 import FunctionLayer.LogicFacade;
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.Styklist;
@@ -34,7 +35,11 @@ public class Login extends Command{
         session.setAttribute( "user", user );
         session.setAttribute( "role", user.getRole() );
         if("customer".equals(user.getRole())) {
-            setupForCustomer(session, user);
+            try {
+                setupForCustomer(session, user);
+            } catch (HouseException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if("employee".equals(user.getRole())) {
             try {
@@ -45,16 +50,18 @@ public class Login extends Command{
         }
         return user.getRole() + "page";
     }
-    private void setupForCustomer(HttpSession session, User user) throws OrderException {
+    private void setupForCustomer(HttpSession session, User user) throws OrderException, HouseException {
         
-        
+        List<Styklist> stykliste = BrickCalculator.getStyklistForUser(user);
         List<LegoHouse> orders = LogicFacade.getAllOrderForUser(user);
+        session.setAttribute("stykliste", stykliste);
         session.setAttribute("orders", orders);
     }
     private void setUpForEmployee(HttpSession session, User user)throws OrderException, HouseException{
          
-        //List<LegoHouse> orders = LogicFacade.getAllOrders();
+        List<LegoHouse> orders = LogicFacade.getAllOrders();
         ArrayList<Styklist> stykliste = BrickCalculator.getAllStykList();
+        session.setAttribute("orders", orders);
         session.setAttribute("stykliste", stykliste);
     }
     

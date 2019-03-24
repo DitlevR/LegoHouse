@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import PresentationLayer.LegoHouse;
+import FunctionLayer.LegoHouse;
 import PresentationLayer.User;
 
 /**

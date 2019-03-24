@@ -7,6 +7,7 @@ package PresentationLayer;
 
 
 import DBacces.OrderException;
+import FunctionLayer.LegoHouse;
 import FunctionLayer.LogicFacade;
 import FunctionLayer.LoginSampleException;
 import java.util.ArrayList;

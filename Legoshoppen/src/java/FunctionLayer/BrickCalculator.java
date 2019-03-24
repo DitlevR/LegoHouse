@@ -8,7 +8,7 @@ package FunctionLayer;
 import DBacces.OrderException;
 import DBacces.OrderMapper;
 import static FunctionLayer.LogicFacade.login;
-import PresentationLayer.LegoHouse;
+import FunctionLayer.LegoHouse;
 import PresentationLayer.User;
 import java.util.ArrayList;
 

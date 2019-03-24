@@ -23,12 +23,15 @@
         You are now logged in as a EMPLOYEE of our wonderful site.
         
         <h1> All Orders  </h1>
-        <% List<Styklist> list = (List<Styklist>) request.getSession().getAttribute("stykliste");
+         <% List<LegoHouse> list = (List<LegoHouse>) request.getSession().getAttribute("orders");
+         List<Styklist> stykliste = (List<Styklist>) request.getSession().getAttribute("stykliste");
         for(int i = 0; i < list.size(); i++) {
-            out.print("<p>" + list.get(i).toString() + "</p>");
+           
             
-        }
-                %>
+            
+            out.print("<p>" + "Order id: " + list.get(i).getOrder_id() +" user id: " + list.get(i).getUser_id() +" length: " + list.get(i).getLength() + " width: " +  list.get(i).getWidth()
+                 + " height: " +  list.get(i).getHeight() +" shipped: " + list.get(i).isShipped() + "</p>");
+            out.print(stykliste.get(i) + "<br>"); } %>
             
     <form action="FrontController" method="post">
             <input type="hidden" name="command" value="logout">
