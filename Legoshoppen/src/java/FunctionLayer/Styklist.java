@@ -9,7 +9,7 @@ package FunctionLayer;
  *
  * @author Rumle
  */
-class Styklist {
+public class Styklist {
     private int brick2x4;
     private int brick2x2;
     private int brick1x2;

@@ -4,9 +4,10 @@
     Author     : kasper
 --%>
 
+<%@page import="FunctionLayer.Styklist"%>
 <%@page import="java.util.List"%>
-<%@page import="logic.LegoHouse"%>
-<%@page import="controller.LogicFacade"%>
+<%@page import="PresentationLayer.LegoHouse"%>
+<%@page import="FunctionLayer.LogicFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -22,10 +23,9 @@
         You are now logged in as a EMPLOYEE of our wonderful site.
         
         <h1> All Orders  </h1>
-        <% List<LegoHouse> list = (List<LegoHouse>) request.getSession().getAttribute("orders");
+        <% List<Styklist> list = (List<Styklist>) request.getSession().getAttribute("stykliste");
         for(int i = 0; i < list.size(); i++) {
-            out.print("<p>" + "Order id: " + list.get(i).getOrder_id() +" user id: " + list.get(i).getUser_id() +" length: " + list.get(i).getLength() + " width: " +  list.get(i).getWidth()
-                 + " height: " +  list.get(i).getHeight() +" shipped: " + list.get(i).isShipped() + "</p>");
+            out.print("<p>" + list.get(i).toString() + "</p>");
             
         }
                 %>

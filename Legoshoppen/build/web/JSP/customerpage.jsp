@@ -4,10 +4,10 @@
     Author     : kasper
 --%>
 
-<%@page import="logic.LegoHouse"%>
+<%@page import="PresentationLayer.LegoHouse"%>
 <%@page import="java.util.List"%>
-<%@page import="controller.LogicFacade"%>
-<%@page import="logic.User"%>
+<%@page import="FunctionLayer.LogicFacade"%>
+<%@page import="PresentationLayer.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -26,13 +26,13 @@
             %> 
         You are now logged in as a customer of our wonderful site.
         <h1>All your orders:</h1>
-        <p> <% List<LegoHouse> list = (List<LegoHouse>) request.getSession().getAttribute("orders");
+         <% List<LegoHouse> list = (List<LegoHouse>) request.getSession().getAttribute("orders");
         for(int i = 0; i < list.size(); i++) {
             out.print("<p>" + "Order id: " + list.get(i).getOrder_id() +" user id: " + list.get(i).getUser_id() +" length: " + list.get(i).getLength() + " width: " +  list.get(i).getWidth()
                  + " height: " +  list.get(i).getHeight() +" shipped: " + list.get(i).isShipped() + "</p>");
             
         }
-                %> </p>
+                %> 
         
     
             <form>
