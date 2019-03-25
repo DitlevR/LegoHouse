@@ -77,7 +77,7 @@ public class BrickCalculator {
         
         
         
-        Styklist order = new Styklist(brick2x4, brick2x2, brick1x2, window2x2, door3x2);
+        Styklist order = new Styklist(brick2x4, brick2x2, brick1x2);
         
         
         return order;

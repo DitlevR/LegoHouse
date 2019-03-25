@@ -13,15 +13,13 @@ public class Styklist {
     private int brick2x4;
     private int brick2x2;
     private int brick1x2;
-    private int window2x2;
-    private int door3x2;
+  
 
-    public Styklist(int brick2x4, int brick2x2, int brick1x2, int window2x2, int door3x2) {
+    public Styklist(int brick2x4, int brick2x2, int brick1x2) {
         this.brick2x4 = brick2x4;
         this.brick2x2 = brick2x2;
         this.brick1x2 = brick1x2;
-        this.window2x2 = window2x2;
-        this.door3x2 = door3x2;
+        
     }
 
     public int getBrick2x4() {
@@ -48,25 +46,11 @@ public class Styklist {
         this.brick1x2 = brick1x2;
     }
 
-    public int getWindow2x2() {
-        return window2x2;
-    }
-
-    public void setWindow2x2(int window2x2) {
-        this.window2x2 = window2x2;
-    }
-
-    public int getDoor3x2() {
-        return door3x2;
-    }
-
-    public void setDoor3x2(int door3x2) {
-        this.door3x2 = door3x2;
-    }
+   
 
     @Override
     public String toString() {
-        return "Styklist: " + "brick2x4: " + brick2x4 + " brick2x2: " + brick2x2 + " brick1x2: " + brick1x2 + " window2x2: " + window2x2 + " door3x2: " + door3x2;
+        return "Styklist: " + "brick2x4: " + brick2x4 + " brick2x2: " + brick2x2 + " brick1x2: " + brick1x2;
     }
 
     
