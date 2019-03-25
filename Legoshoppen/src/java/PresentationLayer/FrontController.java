@@ -6,8 +6,8 @@
 package PresentationLayer;
 
 
-
 import DBacces.OrderException;
+import FunctionLayer.HouseException;
 import FunctionLayer.LoginSampleException;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -40,7 +40,7 @@ public class FrontController extends HttpServlet {
             Command action = Command.from( request );
             String view = action.execute( request, response );
             request.getRequestDispatcher( "/JSP/" + view + ".jsp" ).forward( request, response );
-        } catch ( LoginSampleException ex ) {
+        } catch ( LoginSampleException | HouseException ex ) {
             request.setAttribute( "error", ex.getMessage() );
             request.getRequestDispatcher( "index.jsp" ).forward( request, response );
         } catch (OrderException ex) {

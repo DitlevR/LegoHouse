@@ -60,9 +60,9 @@ public class Login extends Command{
     private void setUpForEmployee(HttpSession session, User user)throws OrderException, HouseException{
          
         List<LegoHouse> orders = LogicFacade.getAllOrders();
-        ArrayList<Styklist> stykliste = BrickCalculator.getAllStykList();
+        
         session.setAttribute("orders", orders);
-        session.setAttribute("stykliste", stykliste);
+        
     }
     
 }

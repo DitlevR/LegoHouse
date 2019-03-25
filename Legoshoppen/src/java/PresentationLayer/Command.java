@@ -3,6 +3,7 @@ package PresentationLayer;
 
 
 import DBacces.OrderException;
+import FunctionLayer.HouseException;
 import FunctionLayer.LoginSampleException;
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ abstract class Command {
         commands.put("saveorder", new saveOrder());
         commands.put("logout", new Logout());
         commands.put("goback", new GoBack());
+        commands.put("orderpage", new OrderPage());
         
         
         
@@ -39,6 +41,6 @@ abstract class Command {
     }
 
     abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
-            throws OrderException, LoginSampleException;
+            throws OrderException, LoginSampleException, HouseException;
 
 }

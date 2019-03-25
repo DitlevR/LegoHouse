@@ -66,7 +66,7 @@ public class Styklist {
 
     @Override
     public String toString() {
-        return "Styklist{" + "brick2x4=" + brick2x4 + ", brick2x2=" + brick2x2 + ", brick1x2=" + brick1x2 + ", window2x2=" + window2x2 + ", door3x2=" + door3x2 + '}';
+        return "Styklist: " + "brick2x4: " + brick2x4 + " brick2x2: " + brick2x2 + " brick1x2: " + brick1x2 + " window2x2: " + window2x2 + " door3x2: " + door3x2;
     }
 
     
